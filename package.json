@@ -1,0 +1,15 @@
+{
+    "name": "coding-challenge",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest --silent=false"
+    },
+    "keywords": [],
+    "author": "Joachim Schwarm <joachim@schwarm.co> (https://www.schwarm.co/)",
+    "license": "ISC",
+    "devDependencies": {
+        "jest": "^27.4.7"
+    }
+}
