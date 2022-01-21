@@ -11,7 +11,16 @@
  * @returns {Number} - Order Total
  */
 function getOrderTotal (cart) {
+  var total = 0;
+  for (i = 0; i < cart.length; i++) {
+    total += cart[i].price;
+  }
 
+  if (total >= 100) {
+    total -= getDiscount(cart);
+  }
+
+  return total;
     // your code goes here :-)
 
 }
@@ -27,7 +36,15 @@ function getOrderTotal (cart) {
  * @returns {Number} - Discount Value
  */
 function getDiscount (cart) {
+ var menTotal = 0;
+  for (r = 0; r < cart.length; r++) {
+    if (cart[r].category.localeCompare("men") == 0) {
+      menTotal += cart[r].price;
+    }
+  }
 
+  menTotal *= 0.15;
+  return Math.round((menTotal + Number.EPSILON) * 100) / 100;
     // your code goes here :-)
 
 }
